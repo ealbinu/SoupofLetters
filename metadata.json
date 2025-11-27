@@ -1,0 +1,5 @@
+{
+  "name": "Sopa de Letras Express",
+  "description": "Un juego de búsqueda de palabras en español. Encuentra tantas palabras como puedas en 1 minuto. Compatible con tacto y ratón.",
+  "requestFramePermissions": []
+}
