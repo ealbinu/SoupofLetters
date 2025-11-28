@@ -2,7 +2,7 @@
   "name": "sopa-letras-express",
   "version": "1.0.0",
   "scripts": {
-    "build": "esbuild index.tsx --bundle --outfile=dist/main.js --loader:.ts=ts --loader:.tsx=tsx --format=esm"
+    "build": "esbuild index.tsx --bundle --outfile=dist/main.js --loader:.ts=ts --loader:.tsx=tsx --format=esm --external:react --external:react-dom"
   },
   "devDependencies": {
     "esbuild": "^0.24.0"
