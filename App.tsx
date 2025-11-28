@@ -4,21 +4,14 @@ import { generateLevel } from './utils/gameLogic';
 import { CellData, Coordinate, GameState, WordLocation, WordTelemetry } from './types';
 import { GAME_DURATION_SECONDS, THEME_COLORS, PRIMARY_ORANGE } from './constants';
 
-// Import images to be bundled
-// @ts-ignore
-import imgScreen1Central from './images/screen1-centralimage.png';
-// @ts-ignore
-import imgScreen2Timer from './images/screen2-tienesunminuto.png';
-// @ts-ignore
-import imgScreen2Regen from './images/screen2-alterminar.png';
-// @ts-ignore
-import imgScreen2Slide from './images/screen2-desliza.png';
-// @ts-ignore
-import imgScreen3Tool1 from './images/screen3-tool1.png';
-// @ts-ignore
-import imgScreen3Tool2 from './images/screen3-tool2.png';
-// @ts-ignore
-import imgEndScreenTools from './images/endScreen-tools.png';
+// Images - using static paths to avoid build/module resolution issues
+const imgScreen1Central = 'images/screen1-centralimage.png';
+const imgScreen2Timer = 'images/screen2-tienesunminuto.png';
+const imgScreen2Regen = 'images/screen2-alterminar.png';
+const imgScreen2Slide = 'images/screen2-desliza.png';
+const imgScreen3Tool1 = 'images/screen3-tool1.png';
+const imgScreen3Tool2 = 'images/screen3-tool2.png';
+const imgEndScreenTools = 'images/endScreen-tools.png';
 
 // --- Sound Utilities (Web Audio API) ---
 let sharedAudioCtx: AudioContext | null = null;
