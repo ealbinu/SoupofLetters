@@ -1,10 +1,21 @@
 {
-  "name": "sopa-letras-express",
-  "version": "1.0.0",
+  "name": "sopa-de-letras-express",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "build": "esbuild index.tsx --bundle --outfile=dist/main.js --loader:.ts=ts --loader:.tsx=tsx --format=esm --external:react --external:react-dom"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react-dom": "^19.2.0",
+    "react": "^19.2.0"
   },
   "devDependencies": {
-    "esbuild": "^0.24.0"
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
   }
 }
