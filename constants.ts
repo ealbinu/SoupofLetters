@@ -1,4 +1,4 @@
-export const GRID_SIZE = 10;
+export const GRID_SIZE = 12;
 export const WORD_COUNT_PER_LEVEL = 6;
 export const GAME_DURATION_SECONDS = 60;
 
