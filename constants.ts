@@ -1,5 +1,5 @@
 export const GRID_SIZE = 12;
-export const WORD_COUNT_PER_LEVEL = 6;
+export const WORD_COUNT_PER_LEVEL = 10;
 export const GAME_DURATION_SECONDS = 60;
 
 export const PRIMARY_ORANGE = '#F5750D';
