@@ -4,6 +4,22 @@ import { generateLevel } from './utils/gameLogic';
 import { CellData, Coordinate, GameState, WordLocation, WordTelemetry } from './types';
 import { GAME_DURATION_SECONDS, THEME_COLORS, PRIMARY_ORANGE } from './constants';
 
+// Import images to be bundled
+// @ts-ignore
+import imgScreen1Central from './images/screen1-centralimage.png';
+// @ts-ignore
+import imgScreen2Timer from './images/screen2-tienesunminuto.png';
+// @ts-ignore
+import imgScreen2Regen from './images/screen2-alterminar.png';
+// @ts-ignore
+import imgScreen2Slide from './images/screen2-desliza.png';
+// @ts-ignore
+import imgScreen3Tool1 from './images/screen3-tool1.png';
+// @ts-ignore
+import imgScreen3Tool2 from './images/screen3-tool2.png';
+// @ts-ignore
+import imgEndScreenTools from './images/endScreen-tools.png';
+
 // --- Sound Utilities (Web Audio API) ---
 let sharedAudioCtx: AudioContext | null = null;
 
@@ -66,17 +82,6 @@ interface FloatingScore {
   y: number;
   isBonus: boolean;
 }
-
-// Asset Paths - using simple relative paths to avoid import.meta.url issues
-const ASSETS = {
-  screen1Central: 'images/screen1-centralimage.png',
-  screen2Timer: 'images/screen2-tienesunminuto.png',
-  screen2Regen: 'images/screen2-alterminar.png',
-  screen2Slide: 'images/screen2-desliza.png',
-  screen3Tool1: 'images/screen3-tool1.png',
-  screen3Tool2: 'images/screen3-tool2.png',
-  endScreenTools: 'images/endScreen-tools.png',
-};
 
 const App: React.FC = () => {
   const [gameState, setGameState] = useState<GameState>(GameState.MENU);
@@ -268,7 +273,7 @@ const App: React.FC = () => {
           <div className={`flex flex-col h-full w-full bg-[${PRIMARY_ORANGE}] text-white overflow-hidden`}>
             {/* Orange Body */}
             <div className="flex-1 flex flex-col items-center justify-center p-8 relative">
-                <h2 className="text-4xl font-black uppercase mb-6 drop-shadow-sm text-center">¿Cómo jugar?</h2>
+                <h2 className="text-4xl font-black uppercase mb-6 drop-shadow-sm text-center">¿CÓMO JUGAR?</h2>
                 
                 <p className="text-lg font-medium text-center max-w-md mb-8 leading-relaxed">
                   Pon a prueba tu habilidad y encuentra la mayor cantidad de palabras en los tableros dinámicos.
@@ -276,7 +281,7 @@ const App: React.FC = () => {
 
                 {/* Central Grid Image */}
                 <div className="relative flex items-center justify-center mb-4 w-full">
-                    <img src={ASSETS.screen1Central} alt="Tutorial Grid" className="w-full max-w-xs h-auto object-contain drop-shadow-lg" />
+                    <img src={imgScreen1Central} alt="Tutorial Grid" className="w-full max-w-xs h-auto object-contain drop-shadow-lg" />
                 </div>
             </div>
 
@@ -307,7 +312,7 @@ const App: React.FC = () => {
                 
                 {/* Timer Graphic */}
                 <div className="w-full max-w-xs mb-6 flex items-center justify-center">
-                    <img src={ASSETS.screen2Timer} alt="Timer" className="w-full h-auto object-contain drop-shadow-lg" />
+                    <img src={imgScreen2Timer} alt="Timer" className="w-full h-auto object-contain drop-shadow-lg" />
                 </div>
 
                 <p className="text-base font-medium max-w-md mb-4 leading-relaxed">
@@ -316,7 +321,7 @@ const App: React.FC = () => {
 
                 {/* Regeneration Visual */}
                 <div className="w-full max-w-xs mb-6 flex items-center justify-center">
-                   <img src={ASSETS.screen2Regen} alt="Regeneration Flow" className="w-full h-auto object-contain" />
+                   <img src={imgScreen2Regen} alt="Regeneration Flow" className="w-full h-auto object-contain" />
                 </div>
 
                 {/* Slide Instruction */}
@@ -326,7 +331,7 @@ const App: React.FC = () => {
 
                 {/* Swipe/Slide Visual */}
                 <div className="w-full max-w-xs mb-4 flex items-center justify-center">
-                   <img src={ASSETS.screen2Slide} alt="Swipe Gesture" className="w-full h-auto object-contain" />
+                   <img src={imgScreen2Slide} alt="Swipe Gesture" className="w-full h-auto object-contain" />
                 </div>
             </div>
 
@@ -354,8 +359,8 @@ const App: React.FC = () => {
               {/* Header / Logo Area */}
               <div className="flex-grow flex flex-col items-center justify-center relative w-full max-w-lg">
                  {/* Decorative Tools */}
-                 <img src={ASSETS.screen3Tool1} alt="" className="w-48 h-auto absolute -top-10 -left-10 md:left-0 opacity-90" />
-                 <img src={ASSETS.screen3Tool2} alt="" className="w-48 h-auto absolute bottom-0 -right-10 md:right-0 opacity-90" />
+                 <img src={imgScreen3Tool1} alt="" className="w-48 h-auto absolute -top-10 -left-10 md:left-0 opacity-90" />
+                 <img src={imgScreen3Tool2} alt="" className="w-48 h-auto absolute bottom-0 -right-10 md:right-0 opacity-90" />
                  
                  <h1 className="text-5xl sm:text-6xl font-black uppercase tracking-tight mb-4 drop-shadow-md z-10 leading-tight">
                    ENCUENTRA<br/>LAS PALABRAS
@@ -409,7 +414,7 @@ const App: React.FC = () => {
 
         {/* Center Graphic */}
         <div className="flex justify-center w-full mb-8 px-4 gap-8">
-            <img src={ASSETS.endScreenTools} alt="Tools" className="w-full h-auto opacity-90" />
+            <img src={imgEndScreenTools} alt="Tools" className="w-full h-auto opacity-90" />
         </div>
 
         <div className="text-center px-4 mb-8">

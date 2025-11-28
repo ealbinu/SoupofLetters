@@ -4,8 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Sopa de Letras Express</title>
+    <script type="importmap">
+    {
+      "imports": {
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/"
+      }
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module" src="./dist/main.js"></script>
+    <script type="module" src="dist/main.js"></script>
     <style>
       /* Prevent pull-to-refresh on mobile */
       body {
@@ -13,16 +22,7 @@
         touch-action: none;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/"
-  }
-}
-</script>
-</head>
+  </head>
   <body class="bg-gray-100 select-none overflow-hidden">
     <div id="root"></div>
   </body>
